@@ -5,6 +5,9 @@
 }
 
 div {	
+	font-family: Minecraft, Unifont;
+	src: url("../media/font/minecraft.ttf");
+	src: url("../media/font/unifont-15.0.01.otf")
 	font-size: 18px;
 	font-weight: normal;
 	letter-spacing: 1px;
