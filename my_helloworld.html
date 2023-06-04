@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Minecraft Space!</title>
+	<style>
+		html {
+			background: url('../media/image/background/dirt.png');
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script type="text/javascript" src="./js/script.js"></script>
+</head>
+
+<body>
+
+	<audio autoplay="autoplay">
+		<source src="./media/audio/click.wav" type="audio/ogg" />
+	</audio>
+
+	<div class="main">
+
+		<img src="./media/image/title.png" width="640" style="margin: 0 0 5em 0;">
+		<p id="splash" class='shiningText'></p>
+
+		<p><button class="button" onclick="playSound(); location.href='http://www.minecraft.net'">现在开始</button></p>
+
+		<p><button class="button" onclick="playSound(); location.replace('./my_introduction.html')">游戏简介</button></p>
+
+		<p><button class="button" onclick="playSound(); location.replace('./my_poem.html')">终末之诗</button></p>
+
+		<p><button class="buttonLocked">网易官网</button></p>
+
+		<p><audio id="music" autoplay="autoplay" loop="loop" src="./media/audio/C418 - Wet Hands.mp3"></audio>
+
+			<img id="musicico" onclick="musiccc()" src="./media/image/icon/music.svg" width="16px">
+			C418 - Wet Hands<br>Made by KoMoriSam!!
+		</p>
+
+		<p> --&gt; <img src="./media/image/icon/github.svg" width="16"> <a
+				href="https://github.com/KoMoriSam">GitHub</a> &lt;--
+			<br> --&gt; <img src="https://www.bilibili.com/favicon.ico" width="16"> <a
+				href="https://space.bilibili.com/71104942">Bilibili</a> &lt;--
+		</p>
+
+	</div>
+
+</body>
+
+</html>
