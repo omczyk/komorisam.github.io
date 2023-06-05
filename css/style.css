@@ -1,11 +1,11 @@
 @font-face {
 	font-family: Minecraft;
-	src: url("../media/font/minecraft.ttf")
+	src: url("../media/font/minecraft.ttf");
 }
 
 @font-face {
 	font-family: Unifont;
-	src: url("../media/font/unifont-15.0.01.otf")
+	src: url("../media/font/unifont-15.0.01.otf");
 }
 
 div {	
