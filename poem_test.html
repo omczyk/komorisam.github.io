@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>文本样式转换</title>
+    <style>
+        html {
+            background: rgba(0, 0, 0, 0.7) url('../media/image/background/end.png');
+            background-size: 10%;
+            background-attachment: fixed;
+            background-blend-mode: darken;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mineStyle.css">
+    <script src="./js/script.js"></script>
+    <script src="./js/getText.js"></script>
+    <script src="./js/pageScroll.js"></script>
+</head>
+
+<body>
+    <audio autoplay="autoplay">
+        <source src="./media/audio/click.wav" type="audio/ogg" />
+    </audio>
+
+    <audio autoplay="autoplay" loop="loop">
+        <source src="./media/audio/C418 - Minecraft.mp3" type="audio/ogg" />
+    </audio>
+
+    <div class="main">
+
+        <img src="./media/image/minecraft.png" width="640" style="margin: 0 0 4em 0;">
+        <p id="splash" class='shiningText'></p>
+        <h1>终末之诗</h1>
+        <input type="text" id="name"  placeholder="请输入您的名字">
+        <button onclick="playSound(); convertText(); scrollToBottom()" class="smallButton">转换</button>
+
+        <div id="output"></div>
+		<p><button class="button" onclick="playSound(); location.href='./index.html'">返回主页</button></p>
+
+		<p><audio id="music" autoplay="autoplay" loop="loop" src="./media/audio/C418 - Minecraft.mp3"></audio>
+
+			<img id="musicico" onclick="musiccc()" src="./media/image/icon/music.svg" width="16px">
+			C418 - Minecraft<br> --&gt; <a href="./my_poem.html">正式版终末之诗 !</a> &lt;-- <br>by KoMoriSam!!
+		</p>
+
+
+		<p> --&gt; <img src="./media/image/icon/github.svg" width="16px"> <a
+				href="https://github.com/KoMoriSam">GitHub</a> &lt;--
+			<br> --&gt; <img src="https://www.bilibili.com/favicon.ico" width="16px"> <a
+				href="https://space.bilibili.com/71104942">Bilibili</a> &lt;--
+		</p>
+
+	</div>
+
+</body>
+
+</html>

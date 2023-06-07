@@ -1,0 +1,115 @@
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#output {
+    margin-top: 20px;
+}
+
+.black {
+    color: black
+}
+
+.dark_blue {
+    color: blue
+}
+
+.dark_green {
+    color: darkgreen
+}
+
+.sky_blue {
+    color: skyblue
+}
+
+.dark_red {
+    color: darkred
+}
+
+.purple {
+    color: purple
+}
+
+.gold {
+    color: gold
+}
+
+.gray {
+    color: gray
+}
+
+.dark_gray {
+    color: darkgray
+}
+
+.blue {
+    color: blue
+}
+
+.bright_green {
+    color: #5F5
+}
+
+.cyan {
+    color: cyan
+}
+
+.red {
+    color: red
+}
+
+.pink {
+    color: pink
+}
+
+.yellow {
+    color: yellow
+}
+
+.white {
+    color: white
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.magic {
+    animation: magic 5s infinite;
+}
+
+@keyframes magic {
+    0% {
+        color: #f00;
+    }
+
+    25% {
+        color: #0f0;
+    }
+
+    50% {
+        color: #00f;
+    }
+
+    75% {
+        color: #ff0;
+    }
+
+    100% {
+        color: #f0f;
+    }
+}

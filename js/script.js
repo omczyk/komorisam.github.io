@@ -30,21 +30,10 @@ function musiccc() {
 	}
 }
 
-// 获取 json 文件中 splashes 数组内的字符串数据
-fetch('../media/text/splashes.json')
-	.then(response => response.json())
-	.then(data => {
-		const splashes = data.splashes;
-		// 将字符串数组渲染到页面上
-		const splashElem = document.getElementById('splash');
-		splashElem.innerHTML = splashes[Math.floor(Math.random() * splashes.length)];
-	})
-	.catch(error => console.error(error));
-
 const root = document.documentElement;
 
 // 监听resize事件，实时更新CSS变量
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
 	// 获取网页宽度
 	const pageWidth = window.innerWidth;
 	// 获取网页高度

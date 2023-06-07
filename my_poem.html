@@ -14,6 +14,7 @@
 	</style>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<script type="text/javascript" src="./js/script.js"></script>
+	<script type="text/javascript" src="./js/getText.js"></script>
 </head>
 
 <body>
@@ -33,15 +34,21 @@
 
 		<h1>终末之诗</h1>
 
-		<input id="name" name="name" type="text" placeholder="请输入您的名字" /><button class="smallButton" onclick="playSound()">start</button>
+		<input type="text" id="playername" name="playername" placeholder="请输入您的名字">
+		<button class="smallButton" onclick="playSound(); setPlayerName()">Set</button>
+
+		<p>
+		<div id="text"></div>
+		</p>
 
 		<p><button class="button" onclick="playSound(); location.href='./index.html'">返回主页</button></p>
 
 		<p><audio id="music" autoplay="autoplay" loop="loop" src="./media/audio/C418 - Minecraft.mp3"></audio>
 
 			<img id="musicico" onclick="musiccc()" src="./media/image/icon/music.svg" width="16px">
-			C418 - Minecraft<br>Made by KoMoriSam!!
+			C418 - Minecraft<br> --&gt; <a href="./poem_test.html">测试版终末之诗 !</a> &lt;-- <br>by KoMoriSam!!
 		</p>
+
 
 		<p> --&gt; <img src="./media/image/icon/github.svg" width="16px"> <a
 				href="https://github.com/KoMoriSam">GitHub</a> &lt;--

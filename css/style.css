@@ -387,3 +387,7 @@ img#musicico {
 		transform: scale(.95) rotate(-15deg);
 	}
 }
+
+#animation-container {
+	font-size: 1em;
+  }
