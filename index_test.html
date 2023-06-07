@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            position: fixed;
+            width: var(--box-width);
+            height: var(--box-width);
+            transform-style: preserve-3d;
+            animation: boxRotate 120s infinite linear;
+        }
+
+        @keyframes boxRotate {
+            0% {
+                transform: rotateY(0);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .box>div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .out-front {
+            background-image: url("./media/image/background/JE_1.20_panorama_0.webp");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transform: rotateY(0deg) translateZ(calc(-1 * (var(--box-width) / 2)));
+            backface-visibility: hidden
+        }
+
+        .out-back {
+            background-image: url("./media/image/background/JE_1.20_panorama_2.webp");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transform: rotateY(180deg) translateZ(calc(-1 * (var(--box-width) / 2)));
+            backface-visibility: hidden
+        }
+
+        .out-left {
+            background-image: url("./media/image/background/JE_1.20_panorama_3.webp");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transform: rotateY(90deg) translateZ(calc(-1 * (var(--box-width) / 2)));
+            backface-visibility: hidden
+        }
+
+        .out-right {
+            background-image: url("./media/image/background/JE_1.20_panorama_1.webp");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transform: rotateY(270deg) translateZ(calc(-1 * (var(--box-width) / 2)));
+            backface-visibility: hidden
+        }
+
+        .out-top {
+            background-image: url("./media/image/background/JE_1.20_panorama_4.webp");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transform: rotateX(-90deg) translateZ(calc(-1 * (var(--box-width) / 2)));
+        }
+
+        .out-bottom {
+            background-image: url("./media/image/background/JE_1.20_panorama_5.webp");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transform: rotateX(90deg) translateZ(calc(-1 * (var(--box-width) / 2)));
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script type="text/javascript" src="./js/script.js"></script>
+
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="out-front"></div>
+        <div class="out-back"></div>
+        <div class="out-left"></div>
+        <div class="out-right"></div>
+        <div class="out-top"></div>
+        <div class="out-bottom"></div>
+    </div>
+
+    <div class="main">
+
+        <img src="./media/image/title.png" width="640" style="margin: 0 0 3.5em 0;">
+        <p id="splash" class='shiningText'></p>
+
+        <p><button class="button" onclick="playSound(); location.href='http://www.minecraft.net'">现在开始</button></p>
+
+        <p><button class="button" onclick="playSound(); location.replace('./my_introduction.html')">游戏简介</button></p>
+
+        <p><button class="button" onclick="playSound(); location.replace('./my_poem.html')">终末之诗</button></p>
+
+        <p><button class="buttonLocked">网易官网</button></p>
+
+        <p><audio id="music" autoplay="autoplay" loop="loop" src="./media/audio/C418 - Wet Hands.mp3"></audio>
+
+            <img id="musicico" onclick="musiccc()" src="./media/image/icon/music.svg" width="16px">
+            C418 - Wet Hands<br> --&gt; <a href="./index.html">返回正式版主页</a> &lt;-- <br>Made by KoMoriSam!!
+        </p>
+
+        <p> --&gt; <img src="./media/image/icon/github.svg" width="16"> <a
+                href="https://github.com/KoMoriSam">GitHub</a> &lt;--
+            <br> --&gt; <img src="https://www.bilibili.com/favicon.ico" width="16"> <a
+                href="https://space.bilibili.com/71104942">Bilibili</a> &lt;--
+        </p>
+
+    </div>
+
+</body>
+
+</html>

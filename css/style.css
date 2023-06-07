@@ -1,12 +1,11 @@
 @font-face {
 	font-family: Minecraft;
-	src: url("https://komorisam.github.io/media/font/minecraft.ttf");
+	src: url("../media/font/minecraft.ttf");
 }
-
 
 @font-face {
 	font-family: Unifont;
-	src: url("https://komorisam.github.io/media/font/unifont-15.0.01.otf");
+	src: url("../media/font/unifont-15.0.01.otf");
 }
 
 div {	
@@ -19,6 +18,10 @@ div {
 	color: whitesmoke;
 	text-shadow: 1px 1px black;
 	transition: font-size 0.2s ease-out;
+}
+body {
+	margin: 0;
+	padding: 0;
 }
 
 @media only screen and (max-width: 1200px) {

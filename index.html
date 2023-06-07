@@ -5,13 +5,70 @@
 	<meta charset="utf-8">
 	<title>Minecraft Space!</title>
 	<style>
-		html {
-			background: rgba(0, 0, 0, 0.7) url('../media/image/background/dirt.png');
-			background-size: 10%;
-			background-attachment: fixed;
-			background-blend-mode: darken;
-		}
-	</style>
+        .box {
+            position: fixed;
+            width: var(--box-width);
+            height: var(--box-width);
+            transform-style: preserve-3d;
+            animation: boxRotate 240s infinite linear;
+        }
+
+        @keyframes boxRotate {
+            0% {
+                transform: rotateY(0);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .box>div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .out-front {
+            background-image: url("./media/image/background/JE_1.19_panorama_0.webp");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transform: rotateY(0deg) translateZ(calc(-1 * (var(--box-width) / 2)));
+            backface-visibility: hidden
+        }
+
+        .out-back {
+            background-image: url("./media/image/background/JE_1.19_panorama_2.webp");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transform: rotateY(180deg) translateZ(calc(-1 * (var(--box-width) / 2)));
+            backface-visibility: hidden
+        }
+
+        .out-left {
+            background-image: url("./media/image/background/JE_1.19_panorama_3.webp");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transform: rotateY(90deg) translateZ(calc(-1 * (var(--box-width) / 2)));
+            backface-visibility: hidden
+        }
+
+        .out-right {
+            background-image: url("./media/image/background/JE_1.19_panorama_1.webp");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transform: rotateY(270deg) translateZ(calc(-1 * (var(--box-width) / 2)));
+            backface-visibility: hidden
+        }
+    </style>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<script type="text/javascript" src="./js/script.js"></script>
 </head>
@@ -22,9 +79,18 @@
 		<source src="./media/audio/click.wav" type="audio/ogg" />
 	</audio>
 
+	<div class="box">
+        <div class="out-front"></div>
+        <div class="out-back"></div>
+        <div class="out-left"></div>
+        <div class="out-right"></div>
+        <div class="out-top"></div>
+        <div class="out-bottom"></div>
+    </div>
+
 	<div class="main">
 
-		<img src="./media/image/title.png" width="640" style="margin: 0 0 5em 0;">
+		<p><img src="./media/image/minecraft.png" width="640"></p>
 		<p id="splash" class='shiningText'></p>
 
 		<p><button class="button" onclick="playSound(); location.href='http://www.minecraft.net'">现在开始</button></p>
@@ -38,7 +104,7 @@
 		<p><audio id="music" autoplay="autoplay" loop="loop" src="./media/audio/C418 - Wet Hands.mp3"></audio>
 
 			<img id="musicico" onclick="musiccc()" src="./media/image/icon/music.svg" width="16px">
-			C418 - Wet Hands<br> --&gt; <a href="./my_test.html">测试版主页 !</a> &lt;-- <br>by KoMoriSam!!
+			C418 - Wet Hands<br> --&gt; <a href="./index_test.html">测试版主页 !</a> &lt;-- <br>by KoMoriSam!!
 		</p>
 
 		<p> --&gt; <img src="./media/image/icon/github.svg" width="16"> <a

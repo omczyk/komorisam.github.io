@@ -40,3 +40,28 @@ fetch('../media/text/splashes.json')
 		splashElem.innerHTML = splashes[Math.floor(Math.random() * splashes.length)];
 	})
 	.catch(error => console.error(error));
+
+const root = document.documentElement;
+
+// 监听resize事件，实时更新CSS变量
+window.addEventListener('resize', function() {
+	// 获取网页宽度
+	const pageWidth = window.innerWidth;
+	// 获取网页高度
+	const pageHeight = window.innerHeight;
+
+	// 将宽度赋值给CSS变量
+	root.style.setProperty('--page-width', `${pageWidth}px`);
+	// 将高度赋值给CSS变量
+	root.style.setProperty('--page-height', `${pageHeight}px`);
+
+	if (pageHeight >= pageWidth) {
+		const boxWidth = pageHeight;
+		root.style.setProperty('--box-width', `${boxWidth}px`);
+	} else {
+		const boxWidth = pageWidth;
+		root.style.setProperty('--box-width', `${boxWidth}px`);
+	}
+});
+
+window.dispatchEvent(new Event('resize'));
